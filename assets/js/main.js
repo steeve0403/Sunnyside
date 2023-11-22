@@ -8,11 +8,11 @@ burger.addEventListener("click", function(){
         nav.classList.add("display");
     }
 });
-function toggleDarkMode() {
+
+let darkModeToggle = document.getElementById("dark-mode-toggle");
+darkModeToggle.addEventListener("click", function() {
     let body = document.body;
     let header = document.querySelector('header');
-
-    // Basculez entre les classes pour activer/désactiver le mode sombre
     body.classList.toggle('dark-mode');
     header.classList.toggle('dark-mode');
-}
+});

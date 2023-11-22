@@ -401,9 +401,12 @@ footer nav.media ul a:hover i {
   }
 }
 /* import dark */
-#darkModeToggle {
+#dark-mode-toggle {
   cursor: pointer;
   height: 20px;
+}
+#dark-mode-toggle:hover {
+  filter: invert(1);
 }
 
 .dark-mode img {

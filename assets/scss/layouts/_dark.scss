@@ -1,10 +1,12 @@
-#darkModeToggle{
+#dark-mode-toggle{
     cursor: pointer;
     height: 20px;
+
+    &:hover{
+        filter: invert(1);
+    }
 }
-#darkModeToggle:hover{
-    //color: hsl(0, 0%, 10%);
-}
+
 
 .dark-mode img {
     filter: invert(1); /* Inversion des couleurs pour l'effet sombre */
