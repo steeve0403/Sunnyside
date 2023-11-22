@@ -1,0 +1,74 @@
+header {
+    width: 100%;
+    height: 80vh;
+    background: no-repeat bottom url("../../images/photos/header.jpg");
+    background-color: #3dbeff;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 3em;
+
+    nav {
+        transition: all .3s ease;
+        transition-delay: .4s;
+
+        ul {
+            @include flexRowCenter();
+            gap: 3em;
+            opacity: 1;
+            transition: all .3s ease;
+            transition-delay: 0s;
+
+            li {
+
+                a {
+
+                    &:hover {
+                        color: hsla(0, 0%, 100%, 0.4);
+                    }
+                }
+
+                &:last-child {
+
+                    a {
+                        background: $white;
+                        color: $very-dark-desaturated-blue;
+                        padding: 1em 1.5em;
+                        border-radius: 100px;
+                        transition: all .3s ease;
+
+                        &:hover {
+                            background: hsla(0, 0%, 100%, 0.2);
+                            color: $white;
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    i#burger {
+        display: none;
+    }
+
+    div {
+        width: 100%;
+        min-height: 200px;
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        @include flexColumnCenter();
+        gap: 3em;
+
+        h1 {
+            @include bigTitle();
+            color: $white;
+            text-align: center;
+        }
+    }
+}

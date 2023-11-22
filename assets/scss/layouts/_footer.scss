@@ -1,0 +1,47 @@
+footer {
+    width: 100%;
+    @include flexColumnCenter();
+    gap: 3em;
+    background: $light-cyan-footer;
+    padding: 5em;
+    padding-bottom: 1.5em;
+    color: $dark-cyan-footer-text;
+
+    nav {
+
+        ul {
+            @include flexRowCenter();
+            gap: 3.5em;
+            margin-bottom: 3em;
+
+            li {
+
+                a {
+                    font-weight: normal;
+                    color: $dark-cyan-footer-text;
+
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+        &.media {
+            ul {
+                gap: 1.5em;
+
+                i {
+                    font-size: 1.3em;
+                }
+
+                a:hover {
+
+                    i {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}

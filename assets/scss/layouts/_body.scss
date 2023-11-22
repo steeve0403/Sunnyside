@@ -1,0 +1,173 @@
+body {
+    width: 100vw;
+    min-height: 100vh;
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        section {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin-bottom: -5px;
+
+            figure {
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &:nth-child(4) {
+                grid-template-columns: 1fr;
+            }
+
+            &:nth-child(5) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            &.client-section {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                gap: 5em;
+                padding: 10%;
+
+                h2 {
+                    @include bigTitle();
+                    color: $grayish-blue;
+                    font-size: 1.3em;
+                    letter-spacing: 0.4em;
+                    line-height: normal;
+                }
+
+                div {
+                    width: 100%;
+                    height: 70%;
+                    @include flexRowCenter();
+                    gap: 5em;
+
+                    article {
+                        padding: 0;
+                        width: 100% / 3;
+                        @include flexColumnCenter();
+                        text-align: center;
+
+                        p {
+                            color: $dark-grayish-blue;
+                        }
+
+                        figure {
+                            width: 6em;
+
+                            img {
+                                border-radius: 100px;
+                            }
+                        }
+
+                        div {
+                            @include flexColumnCenter();
+                            gap: 0.5em;
+
+                            cite {
+                                font-style: normal;
+                                font-weight: 900;
+                            }
+
+                            p {
+                                color: $grayish-blue;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.two-image {
+
+                div {
+                    width: 100%;
+                    @include flexRowCenter();
+                    position: relative;
+
+                    figure {
+                        width: 100%;
+                    }
+
+                    article {
+                        width: 100%;
+                        position: absolute;
+                        bottom: 15%;
+                        @include flexColumnCenter();
+                        text-align: center;
+                        gap: 2em;
+                        padding: 0 32%;
+
+                        h2 {
+                            font-size: 1.7em;
+                        }
+
+                        p {
+                            font-size: 0.8em;
+                            color: $very-dark-grayish-blue;
+                        }
+                    }
+                }
+            }
+
+            article {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 0 20%;
+                gap: 3em;
+
+                p {
+                    color: $grayish-blue;
+                    line-height: 2em;
+                }
+
+                a {
+                    text-transform: uppercase;
+                    position: relative;
+                }
+            }
+
+            &:first-child {
+
+                a {
+
+                    &::before {
+                        @include articleLink();
+                        background: hsla(51, 100%, 49%, 0.4);
+                    }
+
+                    &:hover::before {
+                        background: $yellow;
+                    }
+                }
+            }
+
+            &:nth-child(2) {
+
+                a {
+
+                    &::before {
+                        @include articleLink();
+                        background: hsla(7, 99%, 70%, 0.4);
+                    }
+
+                    &:hover::before {
+                        background: $soft-red;
+                    }
+                }
+            }
+        }
+    }
+}
