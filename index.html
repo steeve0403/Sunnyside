@@ -10,11 +10,13 @@
         <link href="assets/scss/style.css" rel="stylesheet" type="text/css">
         <title>Document</title>
     </head>
-    <body>
+    <body class="dark-mode">
         <header>
-            <figure>
-                <img src="assets/img/logo.svg" alt="logo-sunnyside">
-            </figure>
+
+                <figure id="darkModeToggle" onclick="toggleDarkMode()">
+                    <img src="assets/img/logo.svg" alt="logo-sunnyside">
+                </figure>
+
             <nav id="nav">
                 <ul>
                     <li><a href="#">About</a></li>
@@ -141,17 +143,6 @@
             </nav>
         </footer>
         <script src="https://kit.fontawesome.com/9dacd2a25d.js" crossorigin="anonymous"></script>
-        <script>
-            let burger = document.getElementById("burger");
-            let nav = document.getElementById("nav");
-
-            burger.addEventListener("click", function(){
-                if (nav.classList.contains("display")) {
-                    nav.classList.remove("display");
-                } else {
-                    nav.classList.add("display");
-                }
-            });
-        </script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
