@@ -3,10 +3,12 @@
     height: 20px;
 
     &:hover{
-        filter: invert(1);
+        filter: brightness(70%) contrast(150%) saturate(120%);
     }
 }
+.dark-mode body{
 
+}
 
 .dark-mode img {
     filter: invert(1); /* Inversion des couleurs pour l'effet sombre */

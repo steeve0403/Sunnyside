@@ -406,7 +406,7 @@ footer nav.media ul a:hover i {
   height: 20px;
 }
 #dark-mode-toggle:hover {
-  filter: invert(1);
+  filter: brightness(70%) contrast(150%) saturate(120%);
 }
 
 .dark-mode img {
