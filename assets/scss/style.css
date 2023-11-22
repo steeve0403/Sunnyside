@@ -1,0 +1,406 @@
+/* import utils */
+/* import mixin */
+/* import variable */
+/* import bases */
+/* import font */
+article p, header a, footer a {
+  font-family: "Barlow", sans-serif;
+}
+
+h2, article a, h1, p, header li:last-child a, cite {
+  font-family: "Fraunces", serif;
+}
+
+/* import resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: hsl(212, 27%, 19%);
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: 900;
+} /* import layouts */
+/* import body */
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+body main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+body main section {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin-bottom: -5px;
+}
+body main section figure img {
+  width: 100%;
+}
+body main section:nth-child(4) {
+  grid-template-columns: 1fr;
+}
+body main section:nth-child(5) {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+body main section.client-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5em;
+  padding: 10%;
+}
+body main section.client-section h2 {
+  font-size: 4em;
+  letter-spacing: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  font-size: 1.3em;
+  letter-spacing: 0.4em;
+  line-height: normal;
+}
+body main section.client-section div {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5em;
+}
+body main section.client-section div article {
+  padding: 0;
+  width: 100%/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body main section.client-section div article p {
+  color: hsl(232, 10%, 55%);
+}
+body main section.client-section div article figure {
+  width: 6em;
+}
+body main section.client-section div article figure img {
+  border-radius: 100px;
+}
+body main section.client-section div article div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+}
+body main section.client-section div article div cite {
+  font-style: normal;
+  font-weight: 900;
+}
+body main section.client-section div article div p {
+  color: hsl(210, 4%, 67%);
+}
+body main section.two-image div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+body main section.two-image div figure {
+  width: 100%;
+}
+body main section.two-image div article {
+  width: 100%;
+  position: absolute;
+  bottom: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2em;
+  padding: 0 32%;
+}
+body main section.two-image div article h2 {
+  font-size: 1.7em;
+}
+body main section.two-image div article p {
+  font-size: 0.8em;
+  color: hsl(213, 9%, 39%);
+}
+body main section article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 20%;
+  gap: 3em;
+}
+body main section article p {
+  color: hsl(210, 4%, 67%);
+  line-height: 2em;
+}
+body main section article a {
+  text-transform: uppercase;
+  position: relative;
+}
+body main section:first-child a::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  border-radius: 50px;
+  width: 100%;
+  height: 0.5em;
+  transition: all 0.3s ease;
+  z-index: -1;
+  background: hsla(51, 100%, 49%, 0.4);
+}
+body main section:first-child a:hover::before {
+  background: hsl(51, 100%, 49%);
+}
+body main section:nth-child(2) a::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  border-radius: 50px;
+  width: 100%;
+  height: 0.5em;
+  transition: all 0.3s ease;
+  z-index: -1;
+  background: hsla(7, 99%, 70%, 0.4);
+}
+body main section:nth-child(2) a:hover::before {
+  background: hsl(7, 99%, 70%);
+}
+
+/* import header */
+header {
+  width: 100%;
+  height: 80vh;
+  background: no-repeat bottom url("../img/photos/header.jpg");
+  background-color: #3dbeff;
+  background-size: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 3em;
+}
+header nav {
+  transition: all 0.3s ease;
+  transition-delay: 0.4s;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  opacity: 1;
+  transition: all 0.3s ease;
+  transition-delay: 0s;
+}
+header nav ul li a:hover {
+  color: hsla(0, 0%, 100%, 0.4);
+}
+header nav ul li:last-child a {
+  background: hsl(0, 0%, 100%);
+  color: hsl(212, 27%, 19%);
+  padding: 1em 1.5em;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+header nav ul li:last-child a:hover {
+  background: hsla(0, 0%, 100%, 0.2);
+  color: hsl(0, 0%, 100%);
+  font-weight: normal;
+}
+header nav ul a {
+  color: hsl(0, 0%, 100%);
+}
+header i#burger {
+  display: none;
+}
+header div {
+  width: 100%;
+  min-height: 200px;
+  position: absolute;
+  top: 20vh;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+}
+header div h1 {
+  font-size: 4em;
+  letter-spacing: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+}
+
+/* import footer */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  background: hsl(168, 44%, 70%);
+  padding: 5em;
+  padding-bottom: 1.5em;
+  color: hsl(168, 45%, 32%);
+}
+footer nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5em;
+  margin-bottom: 3em;
+}
+footer nav ul li a {
+  font-weight: normal;
+  color: hsl(168, 45%, 32%);
+}
+footer nav ul li a:hover {
+  color: hsl(0, 0%, 100%);
+}
+footer nav.media ul {
+  gap: 1.5em;
+}
+footer nav.media ul i {
+  font-size: 1.3em;
+}
+footer nav.media ul a:hover i {
+  color: hsl(0, 0%, 100%);
+}
+
+/* import mobile */
+@media screen and (max-width: 700px) {
+  header {
+    padding: 3em 5%;
+  }
+  header .display {
+    height: 45%;
+    transition-delay: 0s;
+  }
+  header .display ul {
+    opacity: 1;
+    transition-delay: 0.4s;
+  }
+  header .display::after {
+    transition-delay: 0.8s;
+    border-right: 40px solid hsl(0, 0%, 100%);
+  }
+  header i#burger {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.6em;
+    display: inline;
+    cursor: pointer;
+  }
+  header nav {
+    position: absolute;
+    top: 8em;
+    left: 5%;
+    width: 90%;
+    height: 0%;
+    background: hsl(0, 0%, 100%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  header nav ul {
+    flex-direction: column;
+    opacity: 0;
+  }
+  header nav ul li a {
+    color: hsl(232, 10%, 55%);
+    font-size: 1.4em;
+  }
+  header nav ul li a:hover {
+    color: hsl(212, 27%, 19%);
+  }
+  header nav ul li:last-child a {
+    background-color: hsl(51, 100%, 49%);
+  }
+  header nav ul li:last-child a:hover {
+    background-color: hsla(51, 100%, 49%, 0.4);
+    color: hsl(213, 9%, 39%);
+  }
+  header nav::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+    top: -40px;
+    width: 0px;
+    height: 0px;
+    border-left: 40px solid transparent;
+    border-top: 40px solid transparent;
+    border-right: 0px solid hsl(0, 0%, 100%);
+    border-bottom: 40px solid transparent;
+    transition: all 0.3s ease;
+    transition-delay: 0s;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body main section {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  body main section:first-child article {
+    grid-row-start: 2;
+    grid-row-end: span 1;
+  }
+  body main section:first-child figure {
+    grid-row-start: 1;
+    grid-row-end: span 1;
+  }
+  body main section:nth-child(3) div:first-child {
+    margin-bottom: -10px;
+  }
+  body main section.client-section div {
+    flex-direction: column;
+  }
+  body main section.client-section div article {
+    width: 80%;
+  }
+  body main section:last-child {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  body main section.two-image div article {
+    padding: 0 3%;
+  }
+}
+/* import dark */
+
+/*# sourceMappingURL=style.css.map */
