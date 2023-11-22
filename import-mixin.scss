@@ -1,0 +1,38 @@
+//font Barlow
+
+@mixin barlow_1 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+@mixin barlow_2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+@mixin barlow_3 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+//font fraunces
+
+
+@mixin fraunces_1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+@mixin fraunces_2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+}
+
+//display flex
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,278 @@
+@import 'import-mixin.scss';
+@import 'import-variable.scss';
+
+body{
+  margin: 0;
+  width: 100%;
+  background-color: $background_color;
+
+
+    header {
+        width: 100vw;
+        height: 800px;
+        background-image: url(img/photos/header.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 56px;
+            padding: 40px;
+
+            #logo {
+                cursor: pointer;
+            }
+
+            ul {
+                list-style: none;
+                
+                li{
+                    display: inline-block;
+                    padding: 15px 30px ;
+
+                    a{
+                        text-decoration: none;
+                        @include barlow_1;
+                        color: $first_color;
+                    }
+                    
+                }
+
+                #cta{
+                    border-radius: 28px;
+                    background-color: $first_color;
+                    
+
+                    a{
+                        @include fraunces_1;
+                        font-size: 15px;
+                        color: $second_color; 
+                    }
+                    
+                }
+                #cta:hover {
+
+                    opacity: 0.25;
+                }
+                #cta a:hover {
+
+                        color: $first_color;
+                        
+                        
+                    }
+            }
+        }
+        #arrow {
+            @include column;
+            
+            h1 {
+                text-align: center;
+                @include fraunces_2;
+                font-size: 56px;
+                margin: 1.3em;
+                color: $first_color;
+            }
+        }
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .grid-area{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+                
+            section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 50%;
+
+                h2 {
+                    width: 50%;
+                    @include fraunces_2;
+                    color: $second_color;
+                    font-size: 40px;
+                    text-align: left;
+                }
+
+                p {
+                    width: 50%;
+                    @include barlow_1;
+                    color: $third_color;
+                    text-align: left;
+                    line-height: 30px;
+                }
+
+                a {
+                    @include fraunces_2;
+                    font-size: 18px;
+                    margin-right: 14em;
+                    padding: 0.5em;
+                    text-decoration: none;
+                    text-align: left;
+                    color: $second_color;
+                    z-index: 2;
+                }
+                    
+                #fluo-one {
+                    margin-top: -1.1em;
+                    width: 133px;
+                    margin-left: 10.5em;
+                    border: none;
+                    border-radius: 28px;
+                    border-bottom: 10px solid rgba( $button_1, 0.25);
+                }
+
+                a:hover + #fluo-one{
+                    z-index: 1;
+                    border-bottom: 10px solid $button_1;
+                }   
+                    
+                #fluo-two {
+                    margin-top: -1.1em;
+                    width: 133px;
+                    margin-left: 10.5em;
+                    border: none;
+                    border-radius: 28px;
+                    border-bottom: 10px solid rgba($button_2, 0.25);
+                }
+
+                a:hover + #fluo-two{
+                    z-index: 1;
+                    border-bottom: 10px solid $button_2;
+                }    
+            }
+        }
+
+        #text-img {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+
+                #background-1 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                    height: 600px;
+                    background-image: url(img/photos/graphic-design.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    
+                    .text {
+                    text-align: center;
+                    margin-top: 20em;
+                    width: 50%;
+                    line-height: 27px;
+
+                    h3  {
+                        @include fraunces_2;
+                        font-size: 28px;
+                        color: $color_green_1;
+                    }
+
+                    p {
+                        @include barlow_2;
+                        color: $color_green_2;
+                    }
+                    
+                }
+            }
+
+                #background-2 {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 50%;
+                    height: 600px;
+                    background-image: url(img/photos/photography.jpg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+
+                    .text {
+                        text-align: center;
+                        margin-top: 20em;
+                        width: 50%;
+                        line-height: 27px;
+    
+                        h3  {
+                            @include fraunces_2;
+                            font-size: 28px;
+                            color: $color_blue_1;
+                        }
+
+                        p {
+                            @include barlow_2;
+                            color: $color_blue_2;
+                        }
+                        
+                    }
+            }
+            
+        }
+
+        .testimonial {
+            margin-top: 10%;
+            h4{
+                text-align: center;
+                @include fraunces_2;
+                font-size: 20px;
+                color: $fourth_color;
+            }
+            
+            section{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                padding-left: -5em;
+                margin: 5em;
+
+
+                .people {
+                    padding-top: 2em;
+                    padding-left: 3em;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        width: 50%;
+                        border-radius: 200px;
+                        height: auto;
+
+                    }
+                    
+                    q {
+                        width: 430px;
+                        text-align: center;
+                        line-height: 32px;
+                        @include barlow_1;
+
+                        }
+                }
+
+            }
+            
+            
+        }
+    }
+}
+
+
+
+
+
