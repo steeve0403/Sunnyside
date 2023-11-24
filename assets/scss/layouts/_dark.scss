@@ -7,10 +7,9 @@
     }
 }
 .dark-mode body{
-
+    background-color: $dark-rhino;
 }
 
 .dark-mode img {
     filter: invert(1); /* Inversion des couleurs pour l'effet sombre */
 }
-

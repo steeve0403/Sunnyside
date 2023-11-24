@@ -1,7 +1,18 @@
+@media screen and (max-width: 480px) {
+
+    header div h1{
+        font-size: 1em;
+    }
+
+}
 @media screen and (max-width: 700px) {
 
     header {
         padding: 3em 5%;
+
+        div h1{
+            font-size: 3em;
+        }
 
         .display {
             height: 45%;
@@ -93,6 +104,9 @@
                 grid-template-columns: 1fr;
                 grid-template-rows: 1fr 1fr;
 
+                .learn-more {
+                    margin-bottom: 50px ;
+                }
                 &:first-child {
 
                     article {
@@ -103,6 +117,7 @@
                     figure {
                         grid-row-start: 1;
                         grid-row-end: span 1;
+
                     }
                 }
 
@@ -124,6 +139,7 @@
                 &:last-child {
                     grid-template-columns: 1fr 1fr;
                     grid-template-rows: 1fr 1fr;
+
                 }
 
                 &.two-image div article {

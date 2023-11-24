@@ -1,6 +1,8 @@
 /* import utils */
 /* import mixin */
 /* import variable */
+/* Light Theme */
+/* Dark Theme */
 /* import bases */
 /* import font */
 article p, header a, footer a {
@@ -31,7 +33,9 @@ ul {
 h2 {
   font-size: 3em;
   font-weight: 900;
-} /* import layouts */
+}
+
+/* import layouts */
 /* import body */
 body {
   width: 100vw;
@@ -301,9 +305,17 @@ footer nav.media ul a:hover i {
 }
 
 /* import mobile */
+@media screen and (max-width: 480px) {
+  header div h1 {
+    font-size: 1em;
+  }
+}
 @media screen and (max-width: 700px) {
   header {
     padding: 3em 5%;
+  }
+  header div h1 {
+    font-size: 3em;
   }
   header .display {
     height: 45%;
@@ -375,6 +387,9 @@ footer nav.media ul a:hover i {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
   }
+  body main section .learn-more {
+    margin-bottom: 50px;
+  }
   body main section:first-child article {
     grid-row-start: 2;
     grid-row-end: span 1;
@@ -409,8 +424,14 @@ footer nav.media ul a:hover i {
   filter: brightness(70%) contrast(150%) saturate(120%);
 }
 
+.dark-mode body {
+  background-color: hsl(230, 33%, 24%);
+}
+
 .dark-mode img {
   filter: invert(1); /* Inversion des couleurs pour l'effet sombre */
 }
+
+/* import loader */
 
 /*# sourceMappingURL=style.css.map */
