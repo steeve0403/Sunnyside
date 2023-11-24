@@ -10,6 +10,14 @@
     background-color: $dark-rhino;
 }
 
-.dark-mode img {
-    filter: invert(1); /* Inversion des couleurs pour l'effet sombre */
+
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.faded-in {
+    opacity: 1;
 }

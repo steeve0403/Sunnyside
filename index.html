@@ -32,7 +32,7 @@
             <i id="burger" class="fa-solid fa-bars"></i>
             <div>
                 <h1>we are creatives</h1>
-                <img class="arrow" src="assets/img/icons/icon-arrow-down.svg" alt="arrow">
+                <img class="arrow" src="assets/img/icons/icon-arrow-down.svg" alt="arrow" />
             </div>
         </header>
         <main>
@@ -43,12 +43,16 @@
                     <a href="#">learn more</a>
                 </article>
                 <figure>
-                    <img src="assets/img/photos/transform.jpg" alt="egg-on-yellow-background" loading="lazy">
+                    <img data-src="assets/img/photos/transform.jpg"
+                         data-src-dark="assets/img/photosDark/transform-dark.png"
+                         alt="egg-on-yellow-background" class="lozad" loading="lazy" />
                 </figure>
             </section>
             <section>
                 <figure>
-                    <img src="assets/img/photos/stand-out.jpg" alt="pink-cup-on-red-background">
+                    <img data-src="assets/img/photos/stand-out.jpg"
+                         data-src-dark="assets/img/photosDark/stand-out-dark.png"
+                         alt="pink-cup-on-red-background" class="lozad" loading="lazy" />
                 </figure>
                 <article class="learn-more">
                     <h2>Stand out to the right audience</h2>
@@ -59,7 +63,9 @@
             <section class="two-image">
                 <div>
                     <figure>
-                        <img src="assets/img/photos/graphic-design.jpg" alt="cherries-on-green-background">
+                        <img data-src="assets/img/photos/graphic-design.jpg"
+                             data-src-dark="assets/img/photosDark/graphic-design-dark.png"
+                             alt="cherries-on-green-background" class="lozad" loading="lazy" />
                     </figure>
                     <article>
                         <h2>Graphic design</h2>
@@ -68,7 +74,9 @@
                 </div>
                 <div>
                     <figure>
-                        <img src="assets/img/photos/photography.jpg" alt="orange-on-blue-background">
+                        <img data-src="assets/img/photos/photography.jpg"
+                             data-src-dark="assets/img/photosDark/photography-dark.png"
+                             alt="orange-on-blue-background" class="lozad" loading="lazy" />
                     </figure>
                     <article>
                         <h2>Photography</h2>
@@ -81,7 +89,9 @@
                 <div>
                     <article>
                         <figure>
-                            <img src="assets/img/peoples/image-emily.jpg" alt="picture-of-women-emily">
+                            <img data-src="assets/img/peoples/image-emily.jpg"
+                                 data-src-dark="assets/img/peoplesDark/image-loupgarou.png"
+                                 alt="picture-of-women-emily" class="lozad" loading="lazy" />
                         </figure>
                         <p>We put out trust in sunnyside and they delivered, marking sure our needs were met and deadlines were always hit.</p>
                         <div>
@@ -147,6 +157,7 @@
             </nav>
         </footer>
         <script src="https://kit.fontawesome.com/9dacd2a25d.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/lozad@1.14.0/dist/lozad.min.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
 </html>

@@ -428,8 +428,14 @@ footer nav.media ul a:hover i {
   background-color: hsl(230, 33%, 24%);
 }
 
-.dark-mode img {
-  filter: invert(1); /* Inversion des couleurs pour l'effet sombre */
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.faded-in {
+  opacity: 1;
 }
 
 /* import loader */
