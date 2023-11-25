@@ -424,18 +424,8 @@ footer nav.media ul a:hover i {
   filter: brightness(70%) contrast(150%) saturate(120%);
 }
 
-.dark-mode body {
-  background-color: hsl(230, 33%, 24%);
-}
-
-.fade {
-  opacity: 0;
-  -webkit-transition: opacity 1s;
-  transition: opacity 1s;
-}
-
-.faded-in {
-  opacity: 1;
+.dark-mode header {
+  background: url("/assets/img/photosDark/header-dark.png");
 }
 
 /* import loader */

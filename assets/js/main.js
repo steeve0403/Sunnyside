@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Check if dark mode is enabled in localStorage
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     const images = document.querySelectorAll('.lozad');
+    const overlay = document.querySelector('#overlay');
 
     // Apply dark mode if it was enabled
     if (isDarkMode) {
@@ -43,14 +44,19 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Code to switch modes
     const switchButton = document.getElementById('dark-mode-toggle');
     switchButton.addEventListener('click', function() {
-        const isDarkMode = document.body.classList.toggle('dark-mode');
-        // Update image src for current mode and reload lozad
-        images.forEach(img => {
-            img.src = isDarkMode ? img.getAttribute('data-src-dark') : img.getAttribute('data-src');
-            observer.triggerLoad(img);
-        });
-        // Store mode in localStorage
-        localStorage.setItem('darkMode', isDarkMode.toString());
-    });
-});
+        // Show the overlay
+        overlay.style.display = 'block';
 
+        // Start the fade in animation
+        setTimeout(() => { overlay.style.opacity = 1 }, 0);
+
+        setTimeout(() => {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+
+            // Update image src for the current mode and reload lozad
+            images.forEach(img => {
+                img.src = isDarkMode ? img.getAttribute('data-src-dark') : img.getAttribute('data-src');
+                observer.triggerLoad(img);
+            });
+
+// Store mode

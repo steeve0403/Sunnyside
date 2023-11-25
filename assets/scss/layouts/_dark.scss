@@ -6,18 +6,9 @@
         filter: brightness(70%) contrast(150%) saturate(120%);
     }
 }
-.dark-mode body{
-    background-color: $dark-rhino;
+.dark-mode header{
+    background:url("/assets/img/photosDark/header-dark.png");
 }
 
 
 
-.fade {
-    opacity: 0;
-    -webkit-transition: opacity 1s;
-    transition: opacity 1s;
-}
-
-.faded-in {
-    opacity: 1;
-}
