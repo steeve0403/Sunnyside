@@ -16,7 +16,6 @@ darkModeToggle.addEventListener("click", function() {
     body.classList.toggle('dark-mode');
     header.classList.toggle('dark-mode');
 });*/
-
 window.addEventListener('DOMContentLoaded', (event) => {
     // Check if dark mode is enabled in localStorage
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
@@ -59,55 +58,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 observer.triggerLoad(img);
             });
 
-// Store mode
+            // Store mode in localStorage
+            localStorage.setItem('darkMode', isDarkMode.toString());
 
-            let points;
-            let stepsPerFrame;
+            // Start the overlay fade out animation
+            overlay.style.opacity = 0;
 
-            function setup() {
-                stepsPerFrame = 5;
-                createCanvas(windowWidth, windowHeight);
-                noFill();
-                strokeWeight(3);
-                reset();
-            }
-
-            function draw() {
-                for (let i = 0; i < stepsPerFrame; i++) {
-                    stroke(0, 255 - i * 255 / stepsPerFrame);
-                    drawLine();
-                }
-            }
-
-            function reset() {
-                background("white");
-                resetPoints();
-            }
-
-            function resetPoints() {
-                points = [];
-                for (let i = 0; i < windowWidth; i++) {
-                    points.push([i, 0]);
-                }
-            }
-
-            function drawLine() {
-                beginShape();
-                let atLeastOneOnScreen = false;
-                points.forEach(p => {
-                    vertex(p[0], p[1]);
-                    p[1] += noise(frameCount / 100 + p[0] / 25);
-                    if (p[1] < windowHeight * 1.1) {
-                        atLeastOneOnScreen = true;
-                    }
-                });
-                endShape();
-
-                if (!atLeastOneOnScreen) {
-                    reset();
-                }
-            }
-
-            function windowResized() {
-                resizeCanvas(windowWidth, windowHeight);
-            }
+            // Hide the overlay after the animation is complete
+            setTimeout(() => { overlay.style.display = 'none' }, 1000);
+        }, 1000);
+    });
+});

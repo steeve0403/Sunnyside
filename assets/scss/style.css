@@ -428,6 +428,10 @@ footer nav.media ul a:hover i {
   background: url("/assets/img/photosDark/header-dark.png");
 }
 
+canvas {
+  display: block;
+}
+
 /* import loader */
 
 /*# sourceMappingURL=style.css.map */
