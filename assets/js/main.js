@@ -45,9 +45,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     switchButton.addEventListener('click', function() {
         // Show the overlay
         overlay.style.display = 'block';
+        overlay.style.opacity = '1';
 
         // Start the fade in animation
-        setTimeout(() => { overlay.style.opacity = 1 }, 0);
+        setTimeout(() => { overlay.style.opacity = '0' }, 0);
 
         setTimeout(() => {
             const isDarkMode = document.body.classList.toggle('dark-mode');
@@ -62,7 +63,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             localStorage.setItem('darkMode', isDarkMode.toString());
 
             // Start the overlay fade out animation
-            overlay.style.opacity = 0;
+            overlay.style.opacity = '0';
 
             // Hide the overlay after the animation is complete
             setTimeout(() => { overlay.style.display = 'none' }, 1000);
