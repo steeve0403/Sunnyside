@@ -50,13 +50,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const switchButton = document.getElementById('dark-mode-toggle');
     switchButton.addEventListener('click', function() {
         // Show the overlay
-        overlay.style.display = 'block'
+        overlay.style.display = 'block';
         overlay.style.opacity = '1';
         loader.style.opacity = '1';
         loader.style.visibility = 'visible';
 
         // Start the fade in animation
-        setTimeout(() => { overlay.style.opacity = '0';
+        setTimeout(() => {
+            overlay.style.opacity = '0';
             loader.style.opacity = '0';
             loader.style.visibility = 'hidden';
         }, 1000);
@@ -77,7 +78,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             overlay.style.opacity = '0';
 
             // Hide the overlay after the animation is complete
-            setTimeout(() => { overlay.style.display = 'none';
+            setTimeout(() => {
+                overlay.style.display = 'none';
                 loader.style.opacity = '0';
                 loader.style.visibility = 'hidden';
             }, 1000);

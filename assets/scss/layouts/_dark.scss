@@ -10,15 +10,18 @@
     background-color: #000000;
 }
 .dark-mode header{
-    background: #717171 url("/assets/img/photosDark/pumpkin.png") no-repeat bottom ;
-
     width: 100%;
     height: 80vh;
+    background: #000000 url("/assets/img/photosDark/pumpkin.png") no-repeat bottom ;
     background-size: 100%;
     display: flex;
     justify-content: space-between;
-    //padding: 3em;
+    padding: 3em;
 
+}
+
+.dark-mode main {
+    background-color: #000000;
 }
 
 .dark-mode footer {

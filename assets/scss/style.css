@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* import utils */
 /* import mixin */
 /* import variable */
@@ -429,12 +430,17 @@ footer nav.media ul a:hover i {
 }
 
 .dark-mode header {
-  background: #717171 url("/assets/img/photosDark/pumpkin.png") no-repeat bottom;
   width: 100%;
   height: 80vh;
+  background: #000000 url("/assets/img/photosDark/pumpkin.png") no-repeat bottom;
   background-size: 100%;
   display: flex;
   justify-content: space-between;
+  padding: 3em;
+}
+
+.dark-mode main {
+  background-color: #000000;
 }
 
 .dark-mode footer {
@@ -608,22 +614,22 @@ footer nav.media ul a:hover i {
 }
 
 body.dark-mode .loader {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
-@keyframes spin {
+@keyframes colorChange {
   0% {
-    transform: rotate(0deg);
+    filter: hue-rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
   }
 }
-body.dark-mode .loader img {
-  width: 50px; /* Ajustez la taille de l'image selon vos besoins */
-  height: 50px;
-  animation: spin 1.5s linear infinite;
-  z-index: 1001;
+.loader::before {
+  content: "•";
+  font-size: 3em;
+  display: inline-block;
+  animation: colorChange 2s linear infinite;
 }
 
 /*# sourceMappingURL=style.css.map */

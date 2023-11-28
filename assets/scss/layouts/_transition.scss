@@ -31,21 +31,22 @@
 }
 
 body.dark-mode .loader {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-@keyframes spin {
+@keyframes colorChange {
     0% {
-        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
     }
 }
 
-body.dark-mode .loader img {
-    width: 50px; /* Ajustez la taille de l'image selon vos besoins */
-    height: 50px;
-    animation: spin 1.5s linear infinite;
-    z-index: 1001;
+.loader::before {
+    content: '\2022';
+    font-size: 3em;
+    display: inline-block;
+    animation: colorChange 2s linear infinite;
 }
+
