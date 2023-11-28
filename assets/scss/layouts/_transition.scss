@@ -34,7 +34,7 @@ body.dark-mode .loader {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
-@keyframes rotate {
+@keyframes spin {
     0% {
         transform: rotate(0deg);
     }
@@ -43,33 +43,9 @@ body.dark-mode .loader {
     }
 }
 
-@keyframes fadeInOut {
-    0%, 100% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 1;
-    }
-}
-
-.loader::before {
-    content: '';
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #fff;
-    position: absolute;
-    animation: rotate 1.5s linear infinite, fadeInOut 1.5s ease-in-out infinite;
-}
-
-.loader::before:nth-child(2) {
-    width: 20px;
-    height: 20px;
-    animation-delay: 0.5s;
-}
-
-.loader::before:nth-child(3) {
-    width: 10px;
-    height: 10px;
-    animation-delay: 1s;
+.loader img {
+    width: 50px; /* Ajustez la taille de l'image selon vos besoins */
+    height: 50px;
+    content: url('assets/img/photosDark/loader.png');
+    animation: spin 1.5s linear infinite;
 }
