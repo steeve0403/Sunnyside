@@ -21,6 +21,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     const images = document.querySelectorAll('.lozad');
     const overlay = document.querySelector('#overlay');
+    const loader = document.createElement('div');
+    loader.classList.add('loader');
+    document.body.appendChild(loader);
 
     // Apply dark mode if it was enabled
     if (isDarkMode) {
@@ -46,9 +49,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // Show the overlay
         overlay.style.display = 'block';
         overlay.style.opacity = '1';
+        loader.style.opacity = '1';
+        loader.style.visibility = 'visible';
 
         // Start the fade in animation
-        setTimeout(() => { overlay.style.opacity = '0' }, 0);
+        setTimeout(() => { overlay.style.opacity = '0';
+            loader.style.opacity = '1';
+            loader.style.visibility = 'hidden';
+        }, 1000);
 
         setTimeout(() => {
             const isDarkMode = document.body.classList.toggle('dark-mode');
@@ -66,7 +74,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
             overlay.style.opacity = '0';
 
             // Hide the overlay after the animation is complete
-            setTimeout(() => { overlay.style.display = 'none' }, 1000);
+            setTimeout(() => { overlay.style.display = 'none';
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+            }, 1000);
         }, 1000);
     });
 });

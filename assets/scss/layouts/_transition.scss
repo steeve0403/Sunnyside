@@ -11,3 +11,65 @@
     transition: opacity 1s;
     z-index: 1000;
 }
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+body.dark-mode .loader {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.loader::before {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    animation: rotate 1.5s linear infinite, fadeInOut 1.5s ease-in-out infinite;
+}
+
+.loader::before:nth-child(2) {
+    width: 20px;
+    height: 20px;
+    animation-delay: 0.5s;
+}
+
+.loader::before:nth-child(3) {
+    width: 10px;
+    height: 10px;
+    animation-delay: 1s;
+}
