@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Check if dark mode is enabled in localStorage
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     const images = document.querySelectorAll('.lozad');
-    const overlay = document.querySelector('#overlay');
+    const overlay = document.querySelector('.overlay');
     const loader = document.createElement('div');
     loader.classList.add('loader');
     document.body.appendChild(loader);
@@ -49,20 +49,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // Code to switch modes
     const switchButton = document.getElementById('dark-mode-toggle');
     switchButton.addEventListener('click', function() {
-        // Show the overlay
-        overlay.style.display = 'block';
-        overlay.style.opacity = '1';
-        loader.style.opacity = '1';
-        loader.style.visibility = 'visible';
+        // Show the loader before changing the design
+        showLoader();
 
-        // Start the fade in animation
+        // Start the fade out animation for the loader and overlay
         setTimeout(() => {
-            overlay.style.opacity = '0';
-            loader.style.opacity = '0';
-            loader.style.visibility = 'hidden';
-        }, 1000);
-
-        setTimeout(() => {
+            hideLoader();
             const isDarkMode = document.body.classList.toggle('dark-mode');
 
             // Update image src for the current mode and reload lozad
@@ -79,10 +71,29 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             // Hide the overlay after the animation is complete
             setTimeout(() => {
-                overlay.style.display = 'none';
-                loader.style.opacity = '0';
-                loader.style.visibility = 'hidden';
+                overlay.style.pointerEvents = 'none';
             }, 1000);
         }, 1000);
     });
+
+    // Function to show the loader
+    function showLoader() {
+        loader.style.opacity = '1';
+        loader.style.visibility = 'visible';
+        loader.addEventListener('animationstart', onAnimationStart);
+    }
+
+    // Function to hide the loader
+    function hideLoader() {
+        loader.style.opacity = '0';
+        loader.style.visibility = 'hidden';
+        loader.removeEventListener('animationstart', onAnimationStart);
+    }
+
+    // Callback function for the 'animationstart' event
+    function onAnimationStart(event) {
+        // Vous pouvez ajouter des actions supplémentaires au début de l'animation si nécessaire
+        console.log('Animation started:', event.animationName);
+    }
 });
+

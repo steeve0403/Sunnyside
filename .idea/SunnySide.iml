@@ -5,6 +5,9 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="9dacd2a25d" level="application" />
+    <orderEntry type="library" name="p5.js" level="application" />
+    <orderEntry type="library" name="9dacd2a25d" level="application" />
+    <orderEntry type="library" name="lozad" level="application" />
     <orderEntry type="library" name="lozad" level="application" />
     <orderEntry type="library" name="p5.js" level="application" />
   </component>

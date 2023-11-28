@@ -6,9 +6,7 @@
         filter: brightness(70%) contrast(150%) saturate(120%);
     }
 }
-.dark-mode body {
-    //background-color: #000000;
-}
+
 .dark-mode header{
     width: 100%;
     height: 80vh;
@@ -22,7 +20,7 @@
 
 .dark-mode main {
     background-color: #000000;
-    color: #ffffff;
+
 }
 
 .dark-mode footer {
