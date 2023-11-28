@@ -9,13 +9,16 @@ burger.addEventListener("click", function(){
     }
 });
 
-/*let darkModeToggle = document.getElementById("dark-mode-toggle");
+/*
+let darkModeToggle = document.getElementById("dark-mode-toggle");
 darkModeToggle.addEventListener("click", function() {
     let body = document.body;
     let header = document.querySelector('header');
     body.classList.toggle('dark-mode');
     header.classList.toggle('dark-mode');
-});*/
+});
+*/
+
 window.addEventListener('DOMContentLoaded', (event) => {
     // Check if dark mode is enabled in localStorage
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
