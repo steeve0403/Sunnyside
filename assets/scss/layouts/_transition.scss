@@ -31,7 +31,7 @@
 }
 
 body.dark-mode .loader {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 @keyframes spin {
@@ -43,9 +43,9 @@ body.dark-mode .loader {
     }
 }
 
-.loader img {
+body.dark-mode .loader img {
     width: 50px; /* Ajustez la taille de l'image selon vos besoins */
     height: 50px;
-    content: url('assets/img/photosDark/loader.png');
     animation: spin 1.5s linear infinite;
+    z-index: 1001;
 }
