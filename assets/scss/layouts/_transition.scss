@@ -11,16 +11,14 @@
     z-index: 1000;
 }
 
-.container.animate {
+.container {
     transition: opacity 1s ease;
 }
 
-.dark-mode .container.animate {
+.dark-mode .container {
+
     opacity: 0;
     pointer-events: none;
-}
-
-.container {
     position: absolute;
     width: 200px;
     height: 200px;
