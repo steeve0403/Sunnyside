@@ -435,7 +435,7 @@ footer nav.media ul a:hover i {
 }
 
 .dark-mode main {
-  background-color: hsla(224, 92%, 14%, 0.6);
+  background-color: hsla(224, 92%, 14%, 0.9);
 }
 .dark-mode main section article h2 {
   color: hsl(0, 0%, 100%);
