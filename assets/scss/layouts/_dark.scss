@@ -19,8 +19,30 @@
 }
 
 .dark-mode main {
-    background-color: #000000;
+    background-color: #293052;
 
+    section {
+        article {
+
+            h2, p {
+                color: $white;
+            }
+
+            a {
+
+
+            }
+        }
+
+        &:first-child {
+
+            a {
+                &::before {
+                    background: #FF0000;
+                }
+            }
+        }
+    }
 }
 
 .dark-mode footer {

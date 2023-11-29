@@ -436,7 +436,13 @@ footer nav.media ul a:hover i {
 }
 
 .dark-mode main {
-  background-color: #000000;
+  background-color: #293052;
+}
+.dark-mode main section article h2, .dark-mode main section article p {
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode main section:first-child a::before {
+  background: #FF0000;
 }
 
 .dark-mode footer {
@@ -587,7 +593,7 @@ footer nav.media ul a:hover i {
   opacity: 0; /* Assurez-vous que l'overlay est initialisé à 1 */
   pointer-events: none; /* Activer les événements de pointeur */
   transition: opacity 1s ease;
-  z-index: 1000;
+  z-index: 1;
 }
 
 /* *** Animation to load *** */

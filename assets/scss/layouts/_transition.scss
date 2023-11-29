@@ -8,7 +8,7 @@
     opacity: 0; /* Assurez-vous que l'overlay est initialisé à 1 */
     pointer-events: none; /* Activer les événements de pointeur */
     transition: opacity 1s ease;
-    z-index: 1000;
+    z-index: 1;
 }
 
 /* *** Animation to load *** */
