@@ -309,17 +309,19 @@ footer nav.media ul a:hover i {
 }
 
 /* import mobile */
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 360px) and (max-width: 479px) {
   header div h1 {
-    font-size: 1em;
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 700px) {
+  header div h1 {
+    font-size: 3em;
   }
 }
 @media screen and (max-width: 700px) {
   header {
     padding: 3em 5%;
-  }
-  header div h1 {
-    font-size: 3em;
   }
   header .display {
     height: 45%;
