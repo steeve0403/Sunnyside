@@ -200,7 +200,6 @@ body main section:nth-child(2) a::before {
 body main section:nth-child(2) a:hover::before {
   background: hsl(7, 99%, 70%);
 }
-
 /* import header */
 header {
   width: 100%;
@@ -448,6 +447,9 @@ footer nav.media ul a:hover i {
 }
 .dark-mode main .client-section {
   background: aliceblue;
+}
+.dark-mode main:last-child {
+  margin: 1em;
 }
 
 .dark-mode footer {

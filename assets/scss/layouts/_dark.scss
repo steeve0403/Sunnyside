@@ -42,10 +42,13 @@
     .client-section {
         background: aliceblue;
     }
+
+    &:last-child {
+        margin: 1em;
+    }
 }
 
-.dark-mode footer {
-    background-color: $dark-background-footer;
+.dark-mode footer {background-color: $dark-background-footer;
 
     i {
         color: $light-cyan-footer;
