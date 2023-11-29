@@ -61,6 +61,7 @@ body main section figure {
 body main section figure img {
   width: 100%;
   height: 100%;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 body main section:nth-child(4) {
   grid-template-columns: 1fr;
@@ -316,8 +317,14 @@ footer nav.media ul a:hover i {
   }
 }
 @media screen and (min-width: 480px) and (max-width: 700px) {
-  header div h1 {
+  body header div h1 {
     font-size: 3em;
+  }
+  body main section article {
+    margin-top: 1em;
+  }
+  body main section .client-section h2 {
+    font-size: 1em;
   }
 }
 @media screen and (max-width: 700px) {
@@ -431,12 +438,6 @@ footer nav.media ul a:hover i {
   filter: brightness(70%) contrast(150%) saturate(120%);
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: black;
-    color: white;
-  }
-}
 .dark-mode header {
   width: 100%;
   height: 80vh;
@@ -445,7 +446,20 @@ footer nav.media ul a:hover i {
   display: flex;
   justify-content: space-between;
 }
+.dark-mode header li:last-child a {
+  background: hsl(0, 100%, 28%);
+  color: hsl(0, 0%, 100%);
+}
 
+@media screen and (max-width: 700px) {
+  .dark-mode header .display::after {
+    transition-delay: 0.8s;
+    border-right: 40px solid hsl(0, 100%, 28%);
+  }
+  .dark-mode header nav {
+    background: hsl(0, 0%, 0%);
+  }
+}
 .dark-mode main {
   background-color: hsla(224, 92%, 14%, 0.9);
 }

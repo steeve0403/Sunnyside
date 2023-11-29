@@ -17,9 +17,11 @@ body {
 
             figure {
                 margin: 0;
+
                 img {
                     width: 100%;
                     height: 100%;
+                    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
                 }
             }
 
