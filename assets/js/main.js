@@ -31,10 +31,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
 
     const observer = lozad(images, {
-        load: function(el) {
+        load: function (el) {
             el.src = document.body.classList.contains('dark-mode') ? el.getAttribute('data-src-dark') : el.getAttribute('data-src');
         },
-        loaded: function(el) {
+        loaded: function (el) {
             el.classList.add('faded-in');
         }
     });
@@ -42,46 +42,31 @@ window.addEventListener('DOMContentLoaded', (event) => {
     observer.observe();
 
     const switchButton = document.getElementById('dark-mode-toggle');
-    switchButton.addEventListener('click', function() {
-        showLoader();
+    switchButton.addEventListener('click', function () {
+        showOverlay(); // Afficher l'overlay pendant la transition
 
         setTimeout(() => {
-            hideLoader();
             const isDarkMode = document.body.classList.toggle('dark-mode');
-            updateImages(isDarkMode);
+
+            images.forEach(img => {
+                img.src = isDarkMode ? img.getAttribute('data-src-dark') : img.getAttribute('data-src');
+                observer.triggerLoad(img);
+            });
+
             localStorage.setItem('darkMode', isDarkMode.toString());
+
+            hideOverlay(); // Masquer l'overlay après la transition
         }, 1000);
     });
 
-    function showLoader() {
+    function showOverlay() {
         overlay.style.opacity = '1';
         overlay.style.pointerEvents = 'auto';
-        loader.style.opacity = '1';
-        loader.style.visibility = 'visible';
-        container.classList.add('show-container-animation');
-        loader.addEventListener('animationstart', onanimationstart);
-        // Start container animation
-        const container = document.querySelector('.container');
-        container.classList.add('show-container-animation');
     }
 
-    function hideLoader() {
+    function hideOverlay() {
         overlay.style.opacity = '0';
         overlay.style.pointerEvents = 'none';
-        loader.style.opacity = '0';
-        loader.style.visibility = 'hidden';
-        loader.removeEventListener('animationstart', onAnimationStart);
-        // Hide container animation
-        const container = document.querySelector('.container');
-        container.classList.remove('show-container-animation');
-    }
-
-    function updateImages(isDarkMode) {
-        images.forEach(img => {
-            img.src = isDarkMode ? img.getAttribute('data-src-dark') : img.getAttribute('data-src');
-            observer.triggerLoad(img);
-        });
     }
 });
-
 
