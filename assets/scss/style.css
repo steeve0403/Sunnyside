@@ -590,11 +590,24 @@ footer nav.media ul a:hover i {
   z-index: 1000;
 }
 
-.container {
-  transition: opacity 1s ease;
+.dark-mode .container:not(.show-container-animation) {
+  opacity: 1;
 }
 
-.dark-mode .container {
+.show-container-animation {
+  animation: container-fade-in 1s ease;
+}
+
+@keyframes container-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container {
+  transition: opacity 1s ease;
   opacity: 0;
   pointer-events: none;
   position: absolute;

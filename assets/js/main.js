@@ -58,6 +58,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
         overlay.style.pointerEvents = 'auto';
         loader.style.opacity = '1';
         loader.style.visibility = 'visible';
+        container.classList.add('show-container-animation');
+        loader.addEventListener('animationstart', onanimationstart);
+        // Start container animation
+        const container = document.querySelector('.container');
+        container.classList.add('show-container-animation');
     }
 
     function hideLoader() {
@@ -65,6 +70,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
         overlay.style.pointerEvents = 'none';
         loader.style.opacity = '0';
         loader.style.visibility = 'hidden';
+        loader.removeEventListener('animationstart', onAnimationStart);
+        // Hide container animation
+        const container = document.querySelector('.container');
+        container.classList.remove('show-container-animation');
     }
 
     function updateImages(isDarkMode) {
