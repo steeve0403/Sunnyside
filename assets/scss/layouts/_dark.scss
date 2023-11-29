@@ -14,41 +14,41 @@
     background-size: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 3em;
-
 }
 
 .dark-mode main {
-    background-color: #293052;
+    background-color: $dark-background-blue;
 
     section {
+
         article {
 
-            h2, p {
+            h2 {
                 color: $white;
             }
 
-            a {
-
-
+            p {
+                color: $dark-grey-text;
             }
         }
+    }
+    .two-image {
 
-        &:first-child {
-
-            a {
-                &::before {
-                    background: #FF0000;
-                }
-            }
+        p {
+            color: $white;
         }
+
+    }
+    .client-section {
+        background: aliceblue;
     }
 }
 
 .dark-mode footer {
-    background-color: #12362E;
-    nav + .media {
-        color: #B3E1D7;
+    background-color: $dark-background-footer;
+
+    i {
+        color: $light-cyan-footer;
     }
 }
 
