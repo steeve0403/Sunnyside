@@ -46,6 +46,15 @@ ____
 </section>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
 
+## 👤 Author
+
+Steeve Zych 
+<a href="https://github.com/steeve0403">
+<i class="fa-brands fa-github-alt"></i>
+</a>
+---
+
+*This project was created as part of the learning process at [BeCode](https://becode.org/).*
 
 
 
