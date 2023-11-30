@@ -46,12 +46,9 @@
 </section>
 <section align="center">
     <h2>Languages used</h2>
-    <img src="assets/img/icons/html5.svg" alt="Html Icon" style="color: #f36c12; width: 12%;">
-    <img src="assets/img/icons/sass.svg" alt="Sass Icon" style="color: #f36c12; width: 12%;">
+    <img src="assets/img/icons/html5.svg" alt="Html Icon" style="color: #f36c12; width: 10%;">
+    <img src="assets/img/icons/sass.svg" alt="Sass Icon" style="color: #f36c12; width: 10%;">
     <img src="assets/img/icons/square-js.svg" alt="JavaScript Icon" style="color: #f36c12; width: 12%;">
-    <i class="fa-brands fa-html5 fa-5x" style="color: #f36c12;"></i>
-    <i class="fa-brands fa-sass fa-5x" style="color: #ff00ea;"></i>
-    <i class="fa-brands fa-js fa-5x" style="color: #fbff1a;"></i>
 </section>
 <section align="center">
     <h2>Author</h2>
